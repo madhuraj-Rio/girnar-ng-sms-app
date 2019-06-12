@@ -1,0 +1,23 @@
+
+
+<div id="wrapper"  [ngClass]="click === true? 'toggled' :''" >
+    <div class="overlay" [ngStyle]="{disply:click === true? 'block' :'none'}" ></div>
+    <ng-progress></ng-progress>
+    <app-header (onToggle)="changeToggle($event)"></app-header>
+    <!-- /#sidebar-wrapper -->
+   
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-lg-offset-2">
+                    <router-outlet></router-outlet>
+                     </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->

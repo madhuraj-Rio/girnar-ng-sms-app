@@ -1,0 +1,23 @@
+.float-left {
+    float: left !important;
+}
+.double-nav .breadcrumb-dn {
+    padding-left: 1rem;
+    color: #424242;
+}
+.double-nav .breadcrumb-dn img {
+    margin: 6px;
+padding-top: 0;
+padding-left: 3rem;
+}
+.hidden-sn .button-collapse {
+    display: block;
+    position: relative;
+    font-size: 1.4rem;
+    margin-right: .625rem;
+    margin-left: -.375rem;
+    padding-left: 0;
+}
+.navbar .button-collapse {
+    padding-top: 1px;
+}

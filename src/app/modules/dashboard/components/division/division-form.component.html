@@ -1,0 +1,30 @@
+<div class="table-wrapper">
+    <div class="table-title">
+        <div class="row">
+            <div class="col-sm-5">
+                <h2>Divisions <b>{{action}}</b></h2>
+            </div>
+            <div class="col-sm-7">
+                <a [routerLink]="['/dashboard/divisions']" class="btn btn-primary"><i class="fa fa-back"></i> <span> Back</span></a>
+             </div>
+        </div>
+    </div>
+     <!-- Success Alert -->
+        <div *ngIf="showSuccessMessage" class="alert alert-success alert-dismissible fade show">
+          <strong>Success!</strong> {{message}}
+          <!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+      </div>
+      <!-- Error Alert -->
+      <div  *ngIf="showErrorMessage"  class="alert alert-danger alert-dismissible fade show">
+          <strong>Error!</strong>{{message}}
+          <!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+      </div>
+    <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header">Dynamic Forms</div>
+              <div class="card-body" *ngIf='fields'>
+                <dynamic-form-builder [fields]="fields" (onSubmit)="getsubmitted($event)"></dynamic-form-builder>
+              </div>
+            </div>
+          </div>
+  </div>

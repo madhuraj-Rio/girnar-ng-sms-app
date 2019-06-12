@@ -1,0 +1,34 @@
+
+<div class="table-wrapper">
+    <div class="table-title">
+        <div class="row">
+            <div class="col-sm-5">
+                <h2>Senders <b>Management</b></h2>
+            </div>
+            <div class="col-sm-7">
+                <a [routerLink]="[ '/dashboard/sender/add']" class="btn btn-primary"><i class="fa fa-plus"></i> <span> Add New</span></a>
+             </div>
+        </div>
+    </div>
+<table class="table table-striped table-hover">
+    <thead>
+            <tr>
+                <th>##</th>
+                <th>Label</th>
+                <th>Vendor</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of listingData">
+                <td>{{item.sid}}</td>
+                <td>{{item.sender_label}}</td>
+                <td>{{item.sender_vendors}}</td>
+                <td>{{item.created_date}}</td>
+                <td><a class="btn btn-white-view" [routerLink]="[ '/dashboard/sender/edit',item.sid]"><i class="fa fa-edit"></i></a></td>
+             </tr>
+               
+        </tbody>
+</table>
+</div>
