@@ -4,6 +4,7 @@ import { Vendors } from '../../../../models/dashboard-data-models';
 import { FormGroup, FormControl } from '@angular/forms';
 import { FormVendorService } from '../../../../shared/forms/form-vendor.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgProgress } from '@ngx-progressbar/core';
 @Component({
   selector: 'app-form',
   templateUrl: './vendor-form.component.html',
@@ -23,9 +24,10 @@ export class VendorFormComponent implements OnInit {
   public seqId: any;
   public vendors : any[];
   constructor(private master: MastersService, private FormService: FormVendorService,
-                private route: ActivatedRoute, private router: Router) 
+                private route: ActivatedRoute, private router: Router, private progress: NgProgress) 
                 { }
   ngOnInit() {
+    this.progress.start();
     this.getAllVendors();
     const urls = this.router.url.split('/');
     this.action = urls[3];
@@ -105,6 +107,7 @@ export class VendorFormComponent implements OnInit {
        data.data.forEach((item, index) => {
         this.vendors.push({key: item.vid,label:item.vendor_name})
         });
+        this.progress.done();
         if ( this.action === 'add') {
             for(var i=0;i<this.FormService.fields.length;i++){
                 if( this.FormService.fields[i].name=='vid'){

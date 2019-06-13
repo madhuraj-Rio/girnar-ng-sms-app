@@ -132,6 +132,7 @@ export class FormSmsConfigService {
             type: 'text',
             name: 'daily_limit_per_mobile',
             label: 'Daily Limit Per Mobile',
+            pattern: '^[0-9]+',
             value: '',
             minlength: 1,
             maxlength: 4,
@@ -140,6 +141,7 @@ export class FormSmsConfigService {
             type: 'text',
             name: 'weekly_limit_per_mobile',
             label: 'Weekly Limit Per Mobile',
+            pattern: '^[0-9]+',
             minlength: 1,
             maxlength: 4,
             value: '',
@@ -148,6 +150,7 @@ export class FormSmsConfigService {
             type: 'text',
             name: 'monthly_limit_per_mobile',
             label: 'Meekly Limit Per Mobile',
+            pattern: '^[0-9]+',
             maxlength: 4,
             value: '',
             required: true
@@ -155,6 +158,7 @@ export class FormSmsConfigService {
         {
             type: 'text',
             name: 'daily_quota',
+            pattern: '^[0-9]+',
             label: 'Daily Quota',
             maxlength: 4,
             value: '',
@@ -164,6 +168,7 @@ export class FormSmsConfigService {
             type: 'text',
             name: 'monthly_quota',
             label: 'Monthly Quota',
+            pattern: '^[0-9]+',
             maxlength: 4,
             value: '',
             required: true

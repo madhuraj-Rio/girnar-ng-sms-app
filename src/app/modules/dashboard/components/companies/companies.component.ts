@@ -11,9 +11,11 @@ import { NgProgress } from '@ngx-progressbar/core';
 })
 export class CompaniesComponent implements OnInit {
  public companies: any[];
+ smsfilterType : string;
   constructor(public master : MastersService, public progress: NgProgress) { }
 
   ngOnInit() {
+    this.smsfilterType = "hellooooo"
     this.progress.start();
     this.getAllCompanies();
   }
@@ -25,6 +27,10 @@ export class CompaniesComponent implements OnInit {
        this.progress.done();
       }
     });
+  }
+  getFilterListing(event){
+    console.log("parent filter",this.companies,event)
+    this.companies = [];
   }
 
 }

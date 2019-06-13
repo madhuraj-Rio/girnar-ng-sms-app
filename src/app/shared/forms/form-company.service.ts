@@ -96,9 +96,9 @@ export class FormCompanyService {
     
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
   
-    return this.http.post<Company>(this.apiUrl + 'smsapirequest', { mobile:'6877776879', 
-    priority:'1', dlr:'1', message:'ets  tstdttd tsdtsd 12',source:"old car",api_keys:'6ede084e37c6'}, httpOptions);
-   // return this.http.get(this.apiUrl + 'company/getRecordById/' + companyId).pipe(
-   //   map(this.extractData));
+    // return this.http.post<Company>(this.apiUrl + 'smsapirequest', { mobile:'6877776879', 
+    // priority:'1', dlr:'1', message:'ets  tstdttd tsdtsd 12',source:"old car",api_keys:'6ede084e37c6'}, httpOptions);
+   return this.http.get(this.apiUrl + 'company/getRecordById/' + companyId).pipe(
+     map(this.extractData));
   }
 }

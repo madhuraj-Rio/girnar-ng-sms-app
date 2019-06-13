@@ -24,7 +24,7 @@ import { SendersComponent } from './components/senders/senders.component';
 import { SenderFormComponent } from './components/senders/sender-form.component';
 import { VendorFormComponent } from './components/vendors/vendor-form.component';
 import { SmsConfigurationsFormComponent } from './components/sms-configurations/sms-configurations-form.component';
-
+import { FilterListComponent } from './../../core/filter-list/filter-list.component'
 import { HTTP_INTERCEPTORS} from '@angular/common/http';
 import { TimeoutInterceptor } from './interceptors/timeout.interceptor';
 @NgModule({
@@ -37,7 +37,7 @@ import { TimeoutInterceptor } from './interceptors/timeout.interceptor';
     DynamicFormBuilderModule
   ],
   declarations: [TestformComponent, DashboardContentComponent, CompaniesComponent, DivisionComponent, EntitiesComponent, SmsSourcesComponent, SmsConfigurationsComponent,CompanyFormComponent,DivisionFormComponent,EntityFormComponent, SmsSourceFormComponent, VendorsComponent, 
-    SendersComponent,SenderFormComponent, VendorFormComponent,SmsConfigurationsFormComponent],
+    SendersComponent,SenderFormComponent, VendorFormComponent,SmsConfigurationsFormComponent,FilterListComponent],
     providers : [
       [{ provide: HTTP_INTERCEPTORS, useClass: TimeoutInterceptor, multi: true }]
     ]
