@@ -27,6 +27,7 @@ import { SmsConfigurationsFormComponent } from './components/sms-configurations/
 import { FilterListComponent } from './../../core/filter-list/filter-list.component'
 import { HTTP_INTERCEPTORS} from '@angular/common/http';
 import { TimeoutInterceptor } from './interceptors/timeout.interceptor';
+import { SmsLogsComponent } from './components/sms-logs/sms-logs.component';
 @NgModule({
   imports: [ 
     CommonModule,
@@ -37,7 +38,7 @@ import { TimeoutInterceptor } from './interceptors/timeout.interceptor';
     DynamicFormBuilderModule
   ],
   declarations: [TestformComponent, DashboardContentComponent, CompaniesComponent, DivisionComponent, EntitiesComponent, SmsSourcesComponent, SmsConfigurationsComponent,CompanyFormComponent,DivisionFormComponent,EntityFormComponent, SmsSourceFormComponent, VendorsComponent, 
-    SendersComponent,SenderFormComponent, VendorFormComponent,SmsConfigurationsFormComponent,FilterListComponent],
+    SendersComponent,SenderFormComponent, VendorFormComponent,SmsConfigurationsFormComponent,FilterListComponent, SmsLogsComponent],
     providers : [
       [{ provide: HTTP_INTERCEPTORS, useClass: TimeoutInterceptor, multi: true }]
     ]

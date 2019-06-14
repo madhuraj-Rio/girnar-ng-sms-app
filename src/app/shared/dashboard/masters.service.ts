@@ -55,4 +55,8 @@ export class MastersService {
     return this.http.get(this.endpoint + 'master/sms-config-list').pipe(
       map(this.extractData));
   }
+  getSmsLogs(count=1): Observable<any> {
+    return this.http.get(this.endpoint + 'master/sms-logs-list/'+count).pipe(
+      map(this.extractData));
+  }
 }

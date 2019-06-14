@@ -16,6 +16,7 @@ import { SmsConfigurationsComponent } from './components/sms-configurations/sms-
 import { SenderFormComponent } from './components/senders/sender-form.component';
 import { VendorFormComponent } from './components/vendors/vendor-form.component';
 import { SmsConfigurationsFormComponent } from './components/sms-configurations/sms-configurations-form.component';
+import { SmsLogsComponent } from './components/sms-logs/sms-logs.component';
 
 const routes: Routes = [{
   path: '',
@@ -83,7 +84,7 @@ const routes: Routes = [{
 {
   path: 'vendors',
   component: VendorsComponent
-}, 
+},
 {
   path: 'vendor/add',
   component: VendorFormComponent
@@ -103,6 +104,10 @@ const routes: Routes = [{
 {
   path: 'sender/edit/:id',
   component: SenderFormComponent
+},
+{
+  path: 'sms-log-history',
+  component: SmsLogsComponent
 },
 {
   path: '**',

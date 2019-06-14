@@ -1,0 +1,40 @@
+
+<div class="table-wrapper">
+  <div class="table-title">
+      <div class="row">
+          <div class="col-sm-12">
+              <h2>SMS Logs <b>History</b></h2>
+          </div>
+      </div>
+  </div>
+<table class="table table-striped table-hover">
+  <thead>
+          <tr>
+              <th>##</th>
+              <th>Company</th>
+              <th>Division</th>
+              <th>Entity</th>
+              <th>Vendor</th>
+              <th>Source</th>
+              <th>Sender</th>
+              <th>Mobile</th>
+              <th>Delivery Status</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let item of listingData;let i = index">
+         
+              <td>{{i+1}}</td>
+              <td>{{item.company}}</td>
+              <td>{{item.division}}</td>
+              <td>{{item.entity}}</td>
+              <td>{{item.vendor_name}}</td>
+              <td>{{item.source_name}}</td>
+              <td>{{item.sender_label}}</td>
+              <td>{{item.mobile}}</td>
+              <td>{{item.delivery_status}}</td>
+           </tr>
+             
+      </tbody>
+</table>
+</div>
